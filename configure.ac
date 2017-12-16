@@ -3,8 +3,10 @@ AC_CONFIG_SRCDIR([opvp_null.c])
 AM_INIT_AUTOMAKE
 AM_CONFIG_HEADER([config.h])
 
+AC_CONFIG_MACRO_DIR([m4])
+
 AC_ARG_ENABLE(progpath)
-AC_DEFINE_UNQUOTED(PROG_PATH, "$enable_progpath")
+AC_DEFINE([PROG_PATH], [$enable_progpath], [Define if needed])
 AC_SUBST(PROG_PATH)
 
 # Checks for programs.
