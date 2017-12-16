@@ -1,6 +1,7 @@
-AC_INIT(opvp_null.c)
-AM_INIT_AUTOMAKE(opvp_null, 0.0.1, no-define)
-AM_CONFIG_HEADER(config.h)
+AC_INIT([opvp_null], [0.0.1])
+AC_CONFIG_SRCDIR([opvp_null.c])
+AM_INIT_AUTOMAKE
+AM_CONFIG_HEADER([config.h])
 
 AC_ARG_ENABLE(progpath)
 AC_DEFINE_UNQUOTED(PROG_PATH, "$enable_progpath")
