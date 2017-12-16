@@ -5,6 +5,11 @@ AM_CONFIG_HEADER([config.h])
 
 AC_CONFIG_MACRO_DIR([m4])
 
+AC_ARG_ENABLE(debug)
+if test x"${enable_debug}" = xyes; then
+  CFLAGS="${CFLAGS} -DDEBUG_PRINT"
+fi
+
 AC_ARG_ENABLE(progpath)
 AC_DEFINE([PROG_PATH], [$enable_progpath], [Define if needed])
 AC_SUBST(PROG_PATH)
